@@ -1,0 +1,215 @@
+// Vendor CSS
+@import "../bower_components/bootstrap/less/bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+@brand-primary: #ac9456;
+
+@navbar-height: 65px;
+@navbar-default-bg: rgba(0, 0, 0, 0.60);
+@navbar-border-radius: 0;
+
+@font-family-base: Roboto, Helvetica, sans-serif;
+@brand-success: @brand-primary;
+
+.btn {
+    text-transform: uppercase;
+}
+
+.restaurant-header {
+    @hero-image: url('../restaurant-inside.jpg') 50%;
+    position: relative;
+    background:  @hero-image;
+
+    // Gradient
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.60)), @hero-image; // FF3.6+
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.60)), @hero-image; // Chrome10+,Safari5.1+
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.60)), @hero-image; // Opera 11.10+
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.60)), @hero-image; // IE10+
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.60)), @hero-image; // W3C
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); // IE6-9
+    background-size: cover;
+    height: 315px;
+
+    .navbar-header {
+        width: 100%;
+        text-align: center;
+        padding: 22.5px;
+        letter-spacing: 0.4px;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .restaurant-name {
+        .make-xs-column(12);
+        .text-center();
+        position: absolute;
+        margin: 0;
+        top: 166px;
+        left: 50%;
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 45px;
+        color: #FFF;
+    }
+}
+
+.reservation-information {
+    @media (min-width: @screen-sm-min) {
+        height: 75px;
+    }
+
+    div {
+        margin: (75-50) / 2px 0;
+        line-height: 50px;
+        font-size: 25px;
+
+        .demo-icon {
+            position: relative;
+            font-size: 50px;
+            top: 8px;
+            left: 8px;
+        }
+
+        @media (min-width: @screen-sm-min) {
+            border-right: 1px solid grey;
+            border-left: 1px solid grey;
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
+.reservation-timer {
+    line-height: 30px;
+    font-weight: 500;
+    margin-bottom: 53px;
+
+    @media (min-width: @screen-sm-min) {
+        margin-top: 70px;
+    }
+
+    .demo-icon {
+        position: relative;
+        font-size: 50px;
+        top: 8px;
+        left: 8px;
+    }
+
+    span {
+        font-size: 25px;
+    }
+}
+
+.reservation-form {
+    .help-block {
+        font-size: 13px;
+        padding-left: @grid-gutter-width / 2;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+
+    .form-control {
+        background-color: #F9F9F9;
+    }
+
+    .has-error {
+        .form-control {
+            background-color: rgba(208, 1, 27, 0.07);
+            border-color: rgba(208, 1, 26, 0.12);
+        }
+    }
+    .input-invalid-icon {
+        top: 30px;
+    }
+}
+
+.results-container {
+    .alert {
+        color: white;
+        background: @brand-primary;
+        font-size: 21px;
+        letter-spacing: 0.7px;
+    }
+
+    .container {
+        font-size: @font-size-h3;
+
+        h3 {
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .demo-icon {
+            font-size: 2.5em;
+        }
+
+        .demo-icon-set {
+            margin-top: 53px;
+            margin-bottom: 50px;
+
+            div {
+                font-weight: 300;
+                line-height: .9;
+            }
+
+            .demo-icon {
+                color: #929292;
+            }
+        }
+
+        .reservation-restaurant {
+            font-weight: 300;
+
+            .row {
+                margin-top: 53px;
+                margin-bottom: 50px;
+            }
+
+            .demo-icon {
+                color: @brand-primary;
+            }
+
+            a {
+                font-size: 22px;
+                line-height: 24px;
+                padding-top: 24px;
+                display: block;
+
+                &:hover, &:focus {
+                    text-decoration: none;
+                }
+
+                .glyphicon {
+                    top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.confirming-container {
+    .text-center();
+    height: 500px;
+    line-height: 500px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.footer-container {
+    .text-center();
+    margin-top: 70px;
+    height: 107px;
+    line-height: 107px;
+    background: #F8F8F8;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 300;
+}

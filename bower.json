@@ -1,0 +1,20 @@
+{
+  "name": "reserve",
+  "version": "0.0.0",
+  "authors": [
+    "Neal Lubin <naftalilubin@gmail.com>"
+  ],
+  "description": "reserve code test",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8"
+  }
+}
