@@ -17,7 +17,7 @@ reserveApp.controller('ReservationCtrl', ['$scope', '$interval', '$timeout',
           $scope.timer.seconds = 59;
           $scope.timer.minutes--;
         } else {
-          alert('Time up!');
+          alert('Your reservation has expired');
           $interval.cancel(timerInterval);
           startTimer();
         }
